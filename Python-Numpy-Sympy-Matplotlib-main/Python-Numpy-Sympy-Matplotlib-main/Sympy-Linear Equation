@@ -1,0 +1,18 @@
+#To solve a linear equation in Python using Symbols
+
+>>> from sympy import *
+>>> from sympy.abc import x, y, z, a, b, d
+>>> eqn = Eq(x/(x+b),(d*x)/a)
+>>> eqn 
+xb+x=dxaxb+x=dxa
+
+>>> solve(eqn,x)
+[0, ad−b][0, ad−b]
+
+>>> eqn = Eq(x-9,1)
+>>> eqn
+x−9=1x−9=1
+
+>>> solve(eqn)
+[10]
+

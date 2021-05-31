@@ -1,0 +1,55 @@
+#To solve pair of linear equations using numpy and matplotlib while displaying using sympy
+
+from sympy.interactive import printing
+printing.init_printing(use_latex=True)
+from sympy import Eq, solve_linear_system, Matrix
+from numpy import linalg
+import numpy as np
+import sympy as sp
+import matplotlib.pyplot as plt
+from matplotlib.pyplot import plot, show
+
+print('Using numpy: ')
+
+eq1 = sp.Function('eq1')
+eq2 = sp.Function('eq2')
+
+x,y = sp.symbols('x y')
+
+eq1 = Eq(x-y,4)
+eq2 = Eq(x+y,4)
+print(eq1)
+print(eq2)
+
+nrow1 = [1,-1]
+nrow2 = [1,1]
+
+nmat = np.array([nrow1,nrow2])
+print(nmat)
+cons = np.array([4,4])
+
+soln = linalg.solve(nmat,cons)
+print(soln)
+
+x = np.linspace(-5,5,100)
+fig = plt.figure()
+ax = fig.add_subplot(1, 1, 1)
+ax.grid()
+
+# plot the functions
+plt.plot(x,x-4, 'b', label='x-y=4')
+plt.plot(x,4-x, 'r', label='x+y=4')
+
+# show the plot
+plt.show()
+
+
+Output:
+
+Using numpy: 
+Eq(x - y, 4)
+Eq(x + y, 4)
+[[ 1 -1]
+ [ 1  1]]
+[4. 0.]
+
