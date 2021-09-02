@@ -10,3 +10,4 @@
  6. Errors and Exception : https://docs.python.org/3/tutorial/errors.html
  7. Built-in functions in python : https://docs.python.org/2/library/functions.html
  8. Built-in Types in python : https://docs.python.org/3/library/stdtypes.html
+ 9. Python documentation : http://www.python.org/doc/
